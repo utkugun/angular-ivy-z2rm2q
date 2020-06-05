@@ -5,6 +5,7 @@ import {Data} from './data'
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 
+
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, HelloComponent ],
