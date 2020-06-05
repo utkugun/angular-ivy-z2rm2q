@@ -24,10 +24,10 @@ export class AppComponent  {
        this.v.push(ss.lng)
 
      }
-     
+     var thiss=this
        var dbref=db.database.ref('den9map')
          dbref.once('value').then(function(datasnapshot){
-
+            
             
          })
 
