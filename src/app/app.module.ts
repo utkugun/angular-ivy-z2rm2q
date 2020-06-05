@@ -5,6 +5,8 @@ import {Data} from './data'
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import{AngularFireModule} from'@angular/fire'
+import{AngularFireAuthModule} from'@angular/fire/auth'
+import{AngularFireDatabaseModule} from'@angular/fire/database'
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AngularFireModule.initializeApp({
@@ -15,7 +17,7 @@ import{AngularFireModule} from'@angular/fire'
     storageBucket: "blistering-fire-8982.appspot.com",
     messagingSenderId: "638492837244",
     appId: "1:638492837244:web:71dfcc26fd009643"
-  }) ],
+  }),AngularFireAuthModule,AngularFireDatabaseModule],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ],
   providers:[]

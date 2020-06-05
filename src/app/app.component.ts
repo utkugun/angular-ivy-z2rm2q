@@ -1,6 +1,6 @@
 import { Component, VERSION } from '@angular/core';
 import {Data} from'./data'
-
+import{AngularFireDatabase} from'@angular/fire/database'
 
 @Component({
   selector: 'my-app',
@@ -11,7 +11,8 @@ export class AppComponent  {
   name = 'Angular ' + VERSION.major;
   adata:Data
    v:number[]=[]
-  constructor(data:Data){
+   db:AngularFireDatabase
+  constructor(data:Data,db:AngularFireDatabase){
     
      data.user=['utku','ali']
      data.userdata=[{lat:null,lng:null}]
@@ -24,6 +25,12 @@ export class AppComponent  {
 
      }
      
+       var dbref=db.database.ref('den9map')
+         dbref.once('value').then(function(datasnapshot){
+
+            
+         })
+
 
          
      
